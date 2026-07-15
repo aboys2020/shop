@@ -1,0 +1,144 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0B0C10;
+  --surface: #1F2833;
+  --surface-2: #2A3441;
+  --border: #3A4555;
+  --text: #C5C6C7;
+  --heading: #FFFFFF;
+  --muted: #8D99AE;
+  --accent: #FF9F1C;
+  --accent-2: #2EC4B6;
+  --danger: #E71D36;
+
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  line-height: 1.6;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg);
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Clash Display', sans-serif;
+  }
+
+  .card {
+    @apply rounded-lg border p-5;
+    background-color: rgba(31, 40, 51, 0.8);
+    border-color: var(--border);
+    backdrop-filter: blur(8px);
+  }
+
+  .input {
+    @apply rounded border px-4 py-2 outline-none transition-colors;
+    background-color: var(--surface);
+    border-color: var(--border);
+    color: var(--heading);
+  }
+
+  .input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded border px-5 py-2.5 font-medium transition-all;
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .btn:hover {
+    background-color: var(--accent);
+    color: var(--bg);
+    box-shadow: 0 0 18px rgba(255, 159, 28, 0.35);
+  }
+
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded px-2 py-0.5 text-xs font-medium;
+  }
+
+  .badge-jd {
+    background-color: rgba(231, 29, 54, 0.15);
+    color: #FF4D6D;
+    border: 1px solid rgba(231, 29, 54, 0.35);
+  }
+
+  .badge-taobao {
+    background-color: rgba(255, 159, 28, 0.15);
+    color: var(--accent);
+    border: 1px solid rgba(255, 159, 28, 0.35);
+  }
+
+  .badge-pdd {
+    background-color: rgba(46, 196, 182, 0.15);
+    color: var(--accent-2);
+    border: 1px solid rgba(46, 196, 182, 0.35);
+  }
+}
+
+@layer utilities {
+  .text-accent {
+    color: var(--accent);
+  }
+
+  .text-accent-2 {
+    color: var(--accent-2);
+  }
+
+  .bg-surface {
+    background-color: var(--surface);
+  }
+
+  .bg-surface-2 {
+    background-color: var(--surface-2);
+  }
+
+  .border-border {
+    border-color: var(--border);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
