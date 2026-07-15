@@ -1,0 +1,3 @@
+# 轻量 CLI 最小依赖（无图表、无 pandas、无 Web 框架）
+httpx>=0.27.0
+beautifulsoup4>=4.12.0

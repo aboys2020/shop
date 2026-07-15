@@ -1,0 +1,8 @@
+# 完整开发依赖（CLI + Web + 图表）
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+httpx>=0.27.0
+beautifulsoup4>=4.12.0
+pydantic>=2.9.0
+plotly>=5.24.0
+matplotlib>=3.9.0
